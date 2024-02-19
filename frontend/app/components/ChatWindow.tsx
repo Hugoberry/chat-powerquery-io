@@ -100,7 +100,6 @@ export function ChatWindow(props: { conversationId: string }) {
 
     try {
       const sourceStepName = "FindDocs";
-      console.log(apiBaseUrl + "/chat")
       let streamedResponse: Record<string, any> = {};
       const remoteChain = new RemoteRunnable({
         url: apiBaseUrl + "/chat",
