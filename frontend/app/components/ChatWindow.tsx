@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { RemoteRunnable } from "langchain/runnables/remote";
 import { applyPatch } from "@langchain/core/utils/json_patch";
 
@@ -316,7 +317,11 @@ export function ChatWindow(props: { conversationId: string }) {
             target="_blank"
             className="text-white flex items-center"
           >
-            <img src="/images/github-mark.svg" className="h-4 mr-1" />
+            <Image
+              src="/images/github-mark.svg"
+              alt="GitHub"
+              className="h-4 mr-1"
+            />
             <span>View Source</span>
           </a>
         </footer>
