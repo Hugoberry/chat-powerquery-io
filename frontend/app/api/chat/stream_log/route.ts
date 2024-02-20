@@ -79,7 +79,9 @@ const getRetriever = async () => {
     apiKey: new ApiKey(process.env.WEAVIATE_API_KEY),
   });
   const vectorstore = await WeaviateStore.fromExistingIndex(
-    new OpenAIEmbeddings({}),
+    new OpenAIEmbeddings({
+      modelName: "text-embedding-3-large"
+    }),
     {
       client,
       indexName: process.env.WEAVIATE_INDEX_NAME,
@@ -213,7 +215,7 @@ export async function POST(req: NextRequest) {
     let llm;
     if (config.configurable.llm === "openai_gpt_4_turbo") {
       llm = new ChatOpenAI({
-        modelName: "gpt-3.5-turbo-1106",
+        modelName: "gpt-4-turbo-preview",
         temperature: 0,
       });
     } else if (config.configurable.llm === "fireworks_mixtral") {
