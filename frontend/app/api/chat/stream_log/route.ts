@@ -211,9 +211,9 @@ export async function POST(req: NextRequest) {
     const config = body.config;
 
     let llm;
-    if (config.configurable.llm === "openai_gpt_3_5_turbo") {
+    if (config.configurable.llm === "openai_gpt_4_turbo") {
       llm = new ChatOpenAI({
-        modelName: "gpt-3.5-turbo-1106",
+        modelName: "gpt-4-turbo-preview",
         temperature: 0,
       });
     } else if (config.configurable.llm === "fireworks_mixtral") {
