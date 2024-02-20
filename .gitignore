@@ -160,3 +160,5 @@ bin/
 pyvenv.cfg
 node_modules/
 .envrc
+
+backend-py/langchain/*

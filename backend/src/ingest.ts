@@ -55,7 +55,9 @@ async function loadPowerQueryIoDocs(): Promise<Array<DocumentInterface>>{
 }
 
 function getEmbeddingsModel(): Embeddings {
-  return new OpenAIEmbeddings();
+  return new OpenAIEmbeddings({
+    modelName: "text-embedding-3-large"
+  });
 }
 
 async function ingestDocs() {
