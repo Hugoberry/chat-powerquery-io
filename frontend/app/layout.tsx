@@ -5,19 +5,19 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chat to PowerQuery",
-  description: "Chatbot for PowerQuery docs",
+  title: "Chat to PowerQuery documentation",
+  description: "Engage in smart discussions on PowerQuery/M language, exploring its comprehensive documentation.",
   openGraph: {
       type: "website",
       url: "https://chat.powerquery.io",
-      title: "Chat PowerQuery.io",
-      description: "Chatbot for PowerQuery docs",
+      title: "Chat to PowerQuery documentation",
+      description: "Engage in smart discussions on PowerQuery/M language, exploring its comprehensive documentation",
       siteName: "Chat to PowerQuery.io",
       images: [{
-        url: "/images/chat-powerquery-io.png",
+        url: "https://chat.powerquery.io/images/chat-powerquery-io.png",
       }],
     },
-  twitter: { card: "summary_large_image", creator: "@igocrite", "images": "/images/chat-powerquery-io.png" },
+  twitter: { card: "summary_large_image", creator: "@igocrite", "images": "https://chat.powerquery.io/images/chat-powerquery-io.png" },
 };
 
 export default function RootLayout({
