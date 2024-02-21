@@ -317,11 +317,7 @@ export function ChatWindow(props: { conversationId: string }) {
             target="_blank"
             className="text-white flex items-center"
           >
-            <Image
-              src="/images/github-mark.svg"
-              alt="GitHub"
-              className="h-4 mr-1"
-            />
+            <img src="/images/github-mark.svg" className="h-4 mr-1" />
             <span>View Source</span>
           </a>
         </footer>
